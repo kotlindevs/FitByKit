@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -19,6 +20,7 @@ import androidx.navigation.NavController
 
 @Composable
 fun WorkoutListScreen(navController: NavController) {
+
     val muscleGroups = listOf(
         "Chest" to "Primary muscles: Pectoralis major and minor. Function: Pushes the arm in front of the body.",
         "Shoulders" to "Primary muscles: Deltoids. Function: Raises the arm away from the body and rotates it.",
@@ -33,10 +35,14 @@ fun WorkoutListScreen(navController: NavController) {
             .fillMaxSize()
             .padding(16.dp)
     ) {
+            val customFontBold = FontFamily(
+                Font(R.font.bold, FontWeight.Normal)
+            )
+
         Text(
             text = "Workout List",
             style = MaterialTheme.typography.headlineLarge,
-            fontFamily = FontFamily.Serif,
+            fontFamily = customFontBold,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(vertical = 16.dp)
         )
@@ -75,18 +81,24 @@ fun MuscleGroupCard(muscleGroup: String, musclePurpose: String, onClick: () -> U
                 .padding(16.dp)
                 .heightIn(min = 120.dp)
         ) {
+            val customFontBold = FontFamily(
+                Font(R.font.bold, FontWeight.Normal)
+            )
+            val customFontRegular = FontFamily(
+                Font(R.font.regular,FontWeight.Normal)
+            )
             Text(
                 text = muscleGroup,
                 style = MaterialTheme.typography.titleLarge,
                     color = Color.Red,
                     fontWeight = FontWeight.Bold,
-                    fontFamily = FontFamily.SansSerif,
+                    fontFamily = customFontBold,
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = musclePurpose,
                 style = MaterialTheme.typography.titleMedium,
-                fontFamily = FontFamily.Monospace,
+                fontFamily = customFontRegular,
             )
         }
     }

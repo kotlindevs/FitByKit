@@ -16,6 +16,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
@@ -26,6 +30,9 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 
 @Composable
 fun HomeScreen(navController: NavController) {
+    val customNormal = FontFamily(
+        Font(R.font.regular, FontWeight.Normal)
+    )
     val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.fitbykit))
     val progress by animateLottieCompositionAsState(composition, iterations = LottieConstants.IterateForever)
 
@@ -44,7 +51,7 @@ fun HomeScreen(navController: NavController) {
                 modifier = Modifier.size(256.dp)
             )
             Spacer(modifier = Modifier.height(16.dp))
-            Text(text = "Welcome to Fit By Kit", style = MaterialTheme.typography.titleLarge)
+            Text(text = "Welcome to Fit By Kit", style = MaterialTheme.typography.titleLarge ,fontFamily = customNormal)
             Spacer(modifier = Modifier.height(16.dp))
             Button(
                 onClick = { navController.navigate("workoutList") },
@@ -55,7 +62,7 @@ fun HomeScreen(navController: NavController) {
                     containerColor = Color.Red
                 )
             ) {
-                Text(text = "View Workouts")
+                Text(text = "View Workouts", fontFamily = customNormal)
             }
         }
     }
