@@ -1,4 +1,4 @@
-package com.example.fitbykit
+package com.example.fitbykit.Screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -9,40 +9,37 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.example.fitbykit.R
+import com.example.fitbykit.ViewModels.WorkoutListViewModel
 
 @Composable
-fun WorkoutListScreen(navController: NavController) {
+fun WorkoutListScreen(navController: NavController, workoutListViewModel: WorkoutListViewModel = viewModel()) {
 
-    val muscleGroups = listOf(
-        "Chest" to "Primary muscles: Pectoralis major and minor. Function: Pushes the arm in front of the body.",
-        "Shoulders" to "Primary muscles: Deltoids. Function: Raises the arm away from the body and rotates it.",
-        "Triceps" to "Primary muscles: Triceps brachii. Function: Straightens the arm at the elbow.",
-        "Back" to "Primary muscles: Latissimus dorsi, rhomboids, and trapezius. Function: Pulls the arm down and towards the body.",
-        "Biceps" to "Primary muscles: Biceps brachii. Function: Bends the arm at the elbow.",
-        "Legs" to "Primary muscles: Quadriceps, hamstrings, calves. Function: Supports body weight and allows movement."
-    )
+    val muscleGroups = workoutListViewModel.muscleGroups
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
-            val customFontBold = FontFamily(
-                Font(R.font.bold, FontWeight.Normal)
-            )
+        val customFontBold = FontFamily(
+            Font(R.font.bold, FontWeight.Normal)
+        )
+
+        val customFontRegular = FontFamily(
+            Font(R.font.regular, FontWeight.Normal)
+        )
 
         Text(
             text = "Workout List",
             style = MaterialTheme.typography.headlineLarge,
-            fontFamily = customFontBold,
+            fontFamily = customFontRegular,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(vertical = 16.dp)
         )
@@ -85,22 +82,22 @@ fun MuscleGroupCard(muscleGroup: String, musclePurpose: String, onClick: () -> U
                 Font(R.font.bold, FontWeight.Normal)
             )
             val customFontRegular = FontFamily(
-                Font(R.font.regular,FontWeight.Normal)
+                Font(R.font.regular, FontWeight.Normal)
             )
             Text(
                 text = muscleGroup,
                 style = MaterialTheme.typography.titleLarge,
-                    color = Color.Red,
-                    fontWeight = FontWeight.Bold,
-                    fontFamily = customFontBold,
+                color = Color.Red,
+                fontWeight = FontWeight.Bold,
+                fontFamily = customFontBold,
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = musclePurpose,
                 style = MaterialTheme.typography.titleMedium,
                 fontFamily = customFontRegular,
+                fontWeight = FontWeight.Bold,
             )
         }
     }
 }
-

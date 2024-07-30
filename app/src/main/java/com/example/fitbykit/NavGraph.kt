@@ -6,6 +6,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.fitbykit.Screens.HomeScreen
+import com.example.fitbykit.Screens.WorkoutDetailScreen
+import com.example.fitbykit.Screens.WorkoutListScreen
 
 
 @Composable
