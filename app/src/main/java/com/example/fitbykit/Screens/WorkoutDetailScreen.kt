@@ -65,7 +65,7 @@ fun WorkoutDetailScreen(workout: String) {
             workoutDetails.forEach { detail ->
                 Card(
                     shape = RoundedCornerShape(8.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFB3B3), contentColor = Color.Black),
+                   // colors = CardDefaults.cardColors(containerColor = Color(0xFFFFB3B3), contentColor = Color.Black),
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(vertical = 8.dp)
@@ -83,7 +83,7 @@ fun WorkoutDetailScreen(workout: String) {
                             style = MaterialTheme.typography.titleMedium.copy(
                                 fontSize = 18.sp,
                                 fontFamily = customFontFamily,
-                                color = Color.Black
+                            //    color = Color.Black
                             )
                         )
                     }

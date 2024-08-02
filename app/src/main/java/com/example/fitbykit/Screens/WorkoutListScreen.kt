@@ -69,9 +69,9 @@ fun MuscleGroupCard(muscleGroup: String, musclePurpose: String, onClick: () -> U
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(8.dp),
-        colors = CardDefaults.cardColors(
+      /*  colors = CardDefaults.cardColors(
             containerColor = Color(0xFFFFB3B3)
-        )
+        ) */
     ) {
         Column(
             modifier = Modifier
@@ -87,7 +87,7 @@ fun MuscleGroupCard(muscleGroup: String, musclePurpose: String, onClick: () -> U
             Text(
                 text = muscleGroup,
                 style = MaterialTheme.typography.titleLarge,
-                color = Color.Red,
+              //  color = Color.Red,
                 fontWeight = FontWeight.Bold,
                 fontFamily = customFontBold,
             )
