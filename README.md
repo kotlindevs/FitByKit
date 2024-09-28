@@ -3,7 +3,7 @@
 Fitness App For New Genration :)
 
 ## Authors
-🌊 [Rajat_Kevat](https://rajattdev.carrd.co)
+🌊 [Rajat_Kevat](https://rajattexe.carrd.co)
 
 ## Logo of the application
 ![Logo](https://raw.githubusercontent.com/kotlindevs/FitByKit/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp)
