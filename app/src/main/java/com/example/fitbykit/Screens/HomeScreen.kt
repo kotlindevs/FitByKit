@@ -1,5 +1,6 @@
 package com.example.fitbykit.Screens
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -10,6 +11,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Snackbar
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -77,7 +79,7 @@ fun HomeScreen(navController: NavController) {
                 ) */
             ) {
                 Text(
-                    text = "View Workouts",
+                    text = "Show Workouts",
                     fontFamily = customNormal,
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp,
