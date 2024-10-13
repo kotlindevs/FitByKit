@@ -39,7 +39,8 @@ fun WorkoutListScreen(navController: NavController, workoutListViewModel: Workou
         Text(
             text = "Workout List",
             style = MaterialTheme.typography.headlineLarge,
-            fontFamily = customFontRegular,
+            color = MaterialTheme.colorScheme.tertiary,
+            fontFamily = customFontBold,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(vertical = 16.dp)
         )

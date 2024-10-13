@@ -63,6 +63,7 @@ fun HomeScreen(navController: NavController) {
             Text(
                 text = "Welcome to Fit By Kit",
                 style = MaterialTheme.typography.titleLarge,
+                color = MaterialTheme.colorScheme.tertiary,
                 fontFamily = customBold,
                 fontSize = 24.sp,
             )

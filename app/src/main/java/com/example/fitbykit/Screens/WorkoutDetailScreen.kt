@@ -22,6 +22,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.fitbykit.VideoPlayerActivity
 import com.example.fitbykit.R
 import com.example.fitbykit.Repository.WorkoutRepository
 import com.example.fitbykit.ViewModels.WorkoutDetailViewModel
@@ -51,11 +52,12 @@ fun WorkoutDetailScreen(workout: String) {
             .padding(16.dp)
     ) {
         // Custom font for workout title
-        val customFontRegular = FontFamily(Font(R.font.regular, FontWeight.Bold))
+        val customFontRegular = FontFamily(Font(R.font.bold, FontWeight.Bold))
         Text(
             text = workout,
             style = MaterialTheme.typography.headlineLarge,
-            modifier = Modifier.padding(bottom = 16.dp),
+            color = MaterialTheme.colorScheme.tertiary,
+            modifier = Modifier.padding(top = 16.dp,bottom = 16.dp),
             fontFamily = customFontRegular,
         )
 
@@ -71,7 +73,8 @@ fun WorkoutDetailScreen(workout: String) {
                         .padding(vertical = 8.dp)
                         .clickable {
                             // Open YouTube link
-                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(detail.second))
+                            val intent = Intent(context, VideoPlayerActivity::class.java)
+                            intent.putExtra("VIDEO_URL", detail.second)
                             context.startActivity(intent)
                         }
                 ) {
