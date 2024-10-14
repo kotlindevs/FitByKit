@@ -9,6 +9,8 @@ import androidx.navigation.navArgument
 import com.example.fitbykit.Screens.HomeScreen
 import com.example.fitbykit.Screens.WorkoutDetailScreen
 import com.example.fitbykit.Screens.WorkoutListScreen
+import com.example.fitbykit.Screens.DietListScreen
+
 
 
 @Composable
@@ -16,6 +18,8 @@ fun NavGraph(startDestination: String = "home"){
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = startDestination) {
         composable("home") { HomeScreen(navController) }
+
+        //workout
         composable("workoutList") { WorkoutListScreen(navController) }
         composable(
             "workoutDetail/{workout}",
@@ -23,5 +27,9 @@ fun NavGraph(startDestination: String = "home"){
         ) { backStackEntry ->
             WorkoutDetailScreen(backStackEntry.arguments?.getString("workout") ?: "")
         }
+
+        //diet
+        composable("dietList") {DietListScreen(navController)}
+
     }
 }

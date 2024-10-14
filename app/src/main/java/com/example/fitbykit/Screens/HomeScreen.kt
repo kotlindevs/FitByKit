@@ -1,6 +1,5 @@
 package com.example.fitbykit.Screens
 
-import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -10,14 +9,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ButtonElevation
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Snackbar
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -55,7 +54,7 @@ fun HomeScreen(navController: NavController) {
             LottieAnimation(
                 composition,
                 progress,
-                modifier = Modifier.size(256.dp)
+                modifier = Modifier.size(256.dp),
             )
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -68,19 +67,29 @@ fun HomeScreen(navController: NavController) {
                 fontSize = 24.sp,
             )
 
-            Spacer(modifier = Modifier.height(2.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
             Button(
                 onClick = { navController.navigate("workoutList") },
                 modifier = Modifier
                     .padding(vertical = 8.dp)
                     .padding(horizontal = 8.dp),
-               /* colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Red
-                ) */
+                elevation = ButtonDefaults.elevatedButtonElevation(4.dp)
             ) {
                 Text(
                     text = "Show Workouts",
+                    fontFamily = customNormal,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp,
+                )
+            }
+
+            Button(
+                onClick = { navController.navigate("dietList") },
+                elevation = ButtonDefaults.elevatedButtonElevation(4.dp)
+            ) {
+                Text(
+                    text = "View Diet Plans",
                     fontFamily = customNormal,
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp,

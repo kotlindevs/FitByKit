@@ -1,6 +1,5 @@
 package com.example.fitbykit
 
-import android.app.appsearch.SetSchemaResponse
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.FrameLayout
@@ -12,7 +11,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
@@ -50,7 +48,7 @@ class VideoPlayerActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         // Initialize the ViewModel
-        viewModel = ViewModelProvider(this).get(VideoPlayerViewModel::class.java)
+        viewModel = ViewModelProvider(this)[VideoPlayerViewModel::class.java]
 
         // Get video URL from intent
         val videoUrl = intent.getStringExtra("VIDEO_URL") ?: return
@@ -99,9 +97,8 @@ fun VideoPlayerScreen(viewModel: VideoPlayerViewModel) {
         // Add a text widget aligned to the left
         Text(
             text = "There You Go",
-            fontSize = 28.sp,
-            style = MaterialTheme.typography.titleLarge,
-            color = MaterialTheme.colorScheme.tertiary,
+            style = MaterialTheme.typography.headlineLarge,
+            color = MaterialTheme.colorScheme.outline,
             fontFamily = customFontRegular,
             textAlign = TextAlign.Start, // Align text to the start (left)
             modifier = Modifier

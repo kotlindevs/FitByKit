@@ -1,14 +1,23 @@
 package com.example.fitbykit.Screens
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.*
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -30,10 +39,6 @@ fun WorkoutListScreen(navController: NavController, workoutListViewModel: Workou
     ) {
         val customFontBold = FontFamily(
             Font(R.font.bold, FontWeight.Normal)
-        )
-
-        val customFontRegular = FontFamily(
-            Font(R.font.regular, FontWeight.Normal)
         )
 
         Text(
@@ -69,10 +74,7 @@ fun MuscleGroupCard(muscleGroup: String, musclePurpose: String, onClick: () -> U
             .fillMaxWidth()
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
-        elevation = CardDefaults.cardElevation(8.dp),
-      /*  colors = CardDefaults.cardColors(
-            containerColor = Color(0xFFFFB3B3)
-        ) */
+        elevation = CardDefaults.cardElevation(4.dp),
     ) {
         Column(
             modifier = Modifier
@@ -88,9 +90,9 @@ fun MuscleGroupCard(muscleGroup: String, musclePurpose: String, onClick: () -> U
             Text(
                 text = muscleGroup,
                 style = MaterialTheme.typography.titleLarge,
-              //  color = Color.Red,
                 fontWeight = FontWeight.Bold,
                 fontFamily = customFontBold,
+                color = MaterialTheme.colorScheme.tertiary
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
@@ -98,6 +100,7 @@ fun MuscleGroupCard(muscleGroup: String, musclePurpose: String, onClick: () -> U
                 style = MaterialTheme.typography.titleMedium,
                 fontFamily = customFontRegular,
                 fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary
             )
         }
     }
