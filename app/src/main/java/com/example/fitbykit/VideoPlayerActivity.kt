@@ -8,10 +8,13 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBars
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.material3.LocalTextStyle
@@ -102,7 +105,10 @@ fun VideoPlayerScreen(viewModel: VideoPlayerViewModel) {
             fontFamily = customFontRegular,
             textAlign = TextAlign.Start, // Align text to the start (left)
             modifier = Modifier
-                .padding(top = 24.dp,bottom = 12.dp)
+                .padding(
+                    top = WindowInsets.statusBars.asPaddingValues().calculateTopPadding(),
+                    bottom = 12.dp
+                )
                 .fillMaxWidth() // Make sure text takes full width for left alignment
         )
 
