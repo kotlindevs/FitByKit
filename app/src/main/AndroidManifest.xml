@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitByKit"
         tools:targetApi="31">
-        <activity android:name=".VideoPlayerActivity"/>
+        <activity android:name=".Screens.VideoPlayerActivity"/>
         <receiver android:name=".Notifications.ReminderBroadcast" android:exported="false"/>
         <activity
             android:name=".MainActivity"

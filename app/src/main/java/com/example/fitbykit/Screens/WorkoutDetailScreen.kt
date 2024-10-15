@@ -31,7 +31,6 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.fitbykit.R
 import com.example.fitbykit.Repository.WorkoutRepository
-import com.example.fitbykit.VideoPlayerActivity
 import com.example.fitbykit.ViewModels.WorkoutDetailViewModel
 import com.example.fitbykit.ViewModels.WorkoutDetailViewModelFactory
 import kotlinx.coroutines.launch

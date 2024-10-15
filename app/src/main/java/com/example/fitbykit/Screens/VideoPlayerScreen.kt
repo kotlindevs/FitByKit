@@ -1,4 +1,4 @@
-package com.example.fitbykit
+package com.example.fitbykit.Screens
 
 import android.os.Bundle
 import android.view.ViewGroup
@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.ViewModelProvider
+import com.example.fitbykit.R
 import com.example.fitbykit.ViewModels.VideoPlayerViewModel
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import com.google.android.exoplayer2.ui.PlayerView
