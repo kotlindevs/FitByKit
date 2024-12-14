@@ -14,11 +14,11 @@ Below are some screenshots of the FitByKit application showcasing its features a
 
 | Screenshot 1      | Screenshot 2      | Screenshot 3      |
 |-------------------|-------------------|-------------------|
-| ![Image1](link1) | ![Image2](link2) | ![Image3](link3) |
+| ![Image1](https://github.com/Admin-573/Hotel/blob/master/1.jpg?raw=true) | ![Image2](https://github.com/Admin-573/Hotel/blob/master/2.jpg?raw=true) | ![Image3](https://github.com/Admin-573/Hotel/blob/master/3.jpg?raw=true) |
 
-| Screenshot 4      | Screenshot 5      | Screenshot 6      |
-|-------------------|-------------------|-------------------|
-| ![Image4](link4) | ![Image5](link5) | ![Image5](link6) |
+| Screenshot 4      | Screenshot 5      |
+|-------------------|-------------------|
+| ![Image4](https://github.com/Admin-573/Hotel/blob/master/4.jpg?raw=true) | ![Image5](https://github.com/Admin-573/Hotel/blob/master/5.jpg?raw=true) |
 
 ## Support
 
