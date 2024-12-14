@@ -16,9 +16,9 @@ Below are some screenshots of the FitByKit application showcasing its features a
 |-------------------|-------------------|-------------------|
 | ![Image1](link1) | ![Image2](link2) | ![Image3](link3) |
 
-| Screenshot 4      | Screenshot 5      |
-|-------------------|-------------------|
-| ![Image4](link4) | ![Image5](link5) |
+| Screenshot 4      | Screenshot 5      | Screenshot 6      |
+|-------------------|-------------------|-------------------|
+| ![Image4](link4) | ![Image5](link5) | ![Image5](link6) |
 
 ## Support
 
